@@ -40,7 +40,7 @@ export default {
     login: function() {
       const { username, password } = this;
       this.$store.dispatch('retrieveToken', { username, password }).then(() => {
-        this.$router.push("/");
+        this.$router.push({ name: 'home' });
       });
     }
   }

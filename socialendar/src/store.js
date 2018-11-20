@@ -6,7 +6,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    token: localStorage.getItem("access_token") || null
+    token: localStorage.getItem("access_token") || null,
+    user: JSON.parse(localStorage.getItem("user")) || null
   },
   getters: {
     loggedIn(state) {
@@ -16,7 +17,7 @@ export default new Vuex.Store({
   },
 
   actions: {
-    retrieveToken(context, credentials) {
+    retrieveToken({context,dispatch}, credentials) {
       return new Promise((resolve, reject) => {
         axios
           // .post("/login", {
@@ -25,12 +26,8 @@ export default new Vuex.Store({
             password: credentials.password
           })
           .then(response => {
-            const token = response.data.token;
-
-            localStorage.setItem("access_token", token);
-            context.commit("retrieveToken", token);
+            dispatch('saveLogin',({context},response));
             resolve(response);
-            console.log(response);
           })
           .catch(error => {
             console.log(error);
@@ -38,7 +35,7 @@ export default new Vuex.Store({
           });
       });
     },
-    register(context, data) {
+    register({context,dispatch}, data) {
       return new Promise((resolve, reject) => {
         axios
           .post("https://reqres.in/api/register", {
@@ -47,9 +44,7 @@ export default new Vuex.Store({
             password: data.password
           })
           .then(response => {
-            const token = response.data.token;
-            context.commit("retrieveToken", token);
-            console.log(response);
+            dispatch('saveLogin',({context},response));
             resolve(response);
           })
           .catch(error => {
@@ -57,12 +52,30 @@ export default new Vuex.Store({
           });
       });
     },
+    saveLogin(context,response) {
+      const token = response.data.token;
+      const user = response.data.user;
+      localStorage.setItem("access_token", token);
+      //localStorage.setItem("user",JSON.stringify(user));
+      context.commit("retrieveToken", token);
+      //context.commit("setUser", user);
+      
+      console.log(response);
+    },
     destroyToken(context) {
       // axios.defaults.headers.common['Authorization'] = 'Bearer ' + context.state.token
 
       if (context.getters.loggedIn) {
         localStorage.removeItem("access_token");
         context.commit("destroyToken");
+      }
+    },
+    destroyUser(context) {
+      // axios.defaults.headers.common['Authorization'] = 'Bearer ' + context.state.token
+
+      if (context.getters.loggedIn) {
+        localStorage.removeItem("user");
+        context.commit("deleteUser");
       }
     }
   },
@@ -72,6 +85,12 @@ export default new Vuex.Store({
     },
     destroyToken(state) {
       state.token = null;
+    },
+    setUser(state, user) {
+      state.user = user;
+    },
+    deleteUser(state, user) {
+      state.user = null;
     }
   }
 });
