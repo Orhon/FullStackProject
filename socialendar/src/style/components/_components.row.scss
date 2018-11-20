@@ -1,0 +1,11 @@
+@import  '../settings/_settings.global';
+
+.c-row {
+	position: relative;
+	padding: 0 #{ $gutter / 2 }px;
+}
+
+.c-row--lg {
+    padding-top: #{ $gutter * 2 }px;
+    padding-bottom: #{ $gutter * 2 }px;
+}

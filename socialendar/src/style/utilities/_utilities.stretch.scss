@@ -1,0 +1,28 @@
+@import '../settings/settings.global';
+
+.u-stretch {
+	display: flex;
+	flex-direction: column;
+
+	min-height: calc( 100vh );
+
+	@include mq( $tablet ) {
+		flex-direction: row;
+	}
+}
+
+.u-stretch__navigation {
+	background: $primary-color;
+
+	@include mq( $tablet ) {
+		width: #{ $nav-ratio * 100% };
+	}
+}
+
+.u-stretch__content {
+	background: $secondary-color;
+
+	@include mq( $tablet ) {
+		width: #{ $content-ratio * 100% };
+	}
+}

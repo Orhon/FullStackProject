@@ -1,0 +1,13 @@
+@import '../settings/_settings.global';
+@import '../tools/tools.mq';
+
+.c-example {
+	position: sticky;
+	top: 0;
+
+	box-sizing: border-box;
+	
+	@include mq( $tablet ) {
+		background: red;
+	}
+}

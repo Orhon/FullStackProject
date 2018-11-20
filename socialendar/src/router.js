@@ -11,16 +11,7 @@ export default new Router({
       path: "/home",
       name: "home",
       component: () =>
-        import(/* webpackChunkName: "home" */ "./components/HelloWorld.vue"),
-    },
-    {
-      path: "/calendar",
-      name: "calendar",
-      component: () =>
-        import(/* webpackChunkName: "calendar" */ "./components/Calendar.vue"),
-      meta: {
-        requiresAuth: true
-      }
+        import(/* webpackChunkName: "home" */ "./components/Calendar.vue"),
     },
     {
       path: "/login",
