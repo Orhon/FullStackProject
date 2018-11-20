@@ -1,0 +1,38 @@
+@import '../settings/settings.global';
+
+.c-nav {
+    margin:0;
+    display:flex;
+    width:auto;
+    height:3em;
+    background-color: $dark-blue;
+    align-items:center;
+    justify-content: space-between;
+
+}
+.c-nav__listitem{
+    text-decoration: none;
+    list-style-type: none;
+    color: $white;
+}
+.c-nav__logo{
+    font-weight:normal;
+}
+.c-nav__Boldlogo{
+    color:#42b983;
+}
+.c-nav__links{
+    display:flex;
+    margin-right:3em;
+}
+.c-nav__links__item{
+    font-weight: 300;
+    padding:0 1em;
+}
+.c-nav__links__item a{
+    text-decoration:none;
+    color: $white;
+}
+.c-nav .router-link-exact-active{
+    color:#42b983;
+}
