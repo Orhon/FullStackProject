@@ -1,20 +1,20 @@
 <template>
   <div>
-    <h1>Add Event</h1>
+    <h1>{{$t("add_event")}}</h1>
     <form id="formEvent" action="#" @submit.prevent="addNewEvent">     
       
       <div>
-        <label for="title">Event title</label>
+        <label for="title">{{$t("event_title")}}</label>
         <input type="text" name="title" id="title" class="title-input" v-model="title">
       </div>
 
       <div>
-        <label for="location">Location</label>
+        <label for="location">{{$t("location")}}</label>
         <input type="text" name="location" id="location" class="location-input" v-model="location">
       </div>
 
       <div>
-        <label for="description">Description</label>
+        <label for="description">{{$t("time")}}</label>
         <textarea type="text" name="description" id="description" class="description-input" 
         v-model="description" form="formEvent"></textarea>
       </div> 
@@ -23,14 +23,15 @@
         <datepicker placeholder="select date" 
         :inline="true" v-model="pickedDate" 
         :maximumView="'month'"
-        :format="customFormatterDate"    
+        :format="customFormatterDate"  
+        :language="getLanguage()"  
         >
         </datepicker>
-        <h2>Date: {{customFormatterDate(pickedDate)}}</h2>
+        <h2>{{$t("date")}}: {{customFormatterDate(pickedDate)}}</h2>
       </div>
 
       <div class="pickTime">
-        <h2>Time: {{customFormatterTime(pickedTime)}}</h2>
+        <h2>{{$t("time")}}: {{customFormatterTime(pickedTime)}}</h2>
         <vue-timepicker v-model="pickedTime" 
         format="HH:mm"
         :minute-interval="5"
@@ -39,11 +40,11 @@
         ></vue-timepicker>       
       </div>
       <div>
-        <label for="private">Private event?</label>
+        <label for="private">{{$t("private_event")}}</label>
         <input type="checkbox" v-model="privateEvent">
       </div>
       <div>
-        <button type="submit" class="btn-submit">Add Event</button>
+        <button type="submit" class="btn-submit">{{$t("add_event")}}</button>
       </div>   
         
     </form>
@@ -57,6 +58,8 @@
 import Datepicker from "vuejs-datepicker";
 import VueTimepicker from "vue2-timepicker";
 import moment from "moment";
+import { en, nl } from "vuejs-datepicker/dist/locale";
+import { i18n } from "@/plugins/i18n";
 
 export default {
   name: "addEvent",
@@ -77,7 +80,8 @@ export default {
       description: "",
       title: "",
       user: null,
-      privateEvent: false
+      privateEvent: false,
+      lang: en
     };
   },
   computed: {},
@@ -107,6 +111,11 @@ export default {
     getCurrentTime: function() {
       this.pickedTime.HH = this.pickedDate.getHours();
       this.pickedTime.mm = this.pickedDate.getMinutes();
+    },
+    getLanguage: function() {
+      let lang;
+      i18n.locale == "en" ? (lang = en) : (lang = nl);
+      return lang;
     }
   },
   created() {
@@ -117,6 +126,4 @@ export default {
 
 <style lang="scss" scoped>
 @import "./src/style/components/components.addEvent";
-
-
 </style>
