@@ -23,7 +23,7 @@ export default new Vuex.Store({
       return new Promise((resolve, reject) => {
         axios
           //  .post("https://reqres.in/api/login", {
-          .get("http://localhost:3000/users", {
+          .post("http://localhost:3000/users", {
             username: credentials.username,
             password: credentials.password
           })
