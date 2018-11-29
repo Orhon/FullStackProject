@@ -1,12 +1,10 @@
+// GENERIC
+@import 'generic/generic.reset';
+@import 'generic/generic.html';
+
 
 // SETTINGS
 @import 'settings/settings.global';
+@import 'settings/settings.font';
 
 
-
-// GENERIC
-@import 'generic/generic.reset';
-
-// COMPONENTS
-
-@import 'components/components.navigation'

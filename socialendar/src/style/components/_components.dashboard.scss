@@ -1,0 +1,28 @@
+@import '../settings/settings.global';
+
+.c-dashboard{
+    background:$dark-grey;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100vh;
+
+}
+.c-dashboard-navitem__svg{
+    margin:1em 0;
+    width:40px;
+    height:auto;
+}
+.c-dashboard-navitem__svg path{
+    fill:white;
+}
+.c-dashboard__navitem:hover{
+    background-color:$primary-color;
+}
+.c-dashboard__navitem{
+    width:100%;
+    height:auto;
+    cursor: pointer;
+}
