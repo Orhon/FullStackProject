@@ -169,7 +169,10 @@ button,
 input { /* 1 */
   overflow: visible;
 }
-
+input, button, submit { border:none; } 
+button{
+  background-color:transparent;
+}
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.

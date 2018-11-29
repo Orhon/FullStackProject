@@ -44,10 +44,6 @@
         <verte picker="square" v-model="color" model="hex" ></verte> 
       </div>
       <div>
-        <label for="private">{{$t("private_event")}}</label>
-        <input type="checkbox" v-model="privateEvent">
-      </div>
-      <div>
         <button type="submit" class="btn-submit">{{$t("add_event")}}</button>
       </div>   
         
@@ -88,7 +84,6 @@ export default {
       title: "",
       user: null,
       color: '',
-      privateEvent: false,
       lang: en
     };
   },
@@ -111,11 +106,12 @@ export default {
         user: this.user,
         date: this.pickedDate,
         time: this.pickedTime,
-        privateEvent: this.privateEvent,
         color: this.color
       };
       console.log("added event: ", eventObj);
-      localStorage.setItem("event", eventObj);
+
+      localStorage.setItem("event", JSON.stringify(eventObj));
+      
     },
     getCurrentTime: function() {
       this.pickedTime.HH = this.pickedDate.getHours();
