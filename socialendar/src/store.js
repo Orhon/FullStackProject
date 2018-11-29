@@ -7,13 +7,15 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     token: localStorage.getItem("access_token") || null,
-    user: JSON.parse(localStorage.getItem("user")) || null
+    user: JSON.parse(localStorage.getItem("user")) || null,
+    savedEvents: (localStorage.getItem('savedEvents')) ? JSON.parse(localStorage.getItem('savedEvents')) : [],
   },
   getters: {
     loggedIn(state) {
-      return state.token !== null;
+      return state.token !== null;g
     },
-    getToken: state => state.token
+    getToken: state => state.token,
+    getsavedEvents : state => state.savedEvents,
   },
 
   actions: {
@@ -91,6 +93,10 @@ export default new Vuex.Store({
     },
     deleteUser(state, user) {
       state.user = null;
-    }
+    },
+    AddEvent(state,event){
+      state.savedEvents.push(event)
+      localStorage.setItem('savedEvents', JSON.stringify( state.savedEvents ));
+  }
   }
 });
