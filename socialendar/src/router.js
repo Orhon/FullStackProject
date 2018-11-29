@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from './views/Home.vue';
 import Dashboard from './views/Dashboard.vue';
 import Events from './components/Calendar.vue';
+import CalendarDetail from './components/CalendarDetail.vue';
 
 
 Vue.use(Router);
@@ -56,6 +57,12 @@ export default new Router({
       name: "logout",
       component: () =>
         import(/* webpackChunkName: "logout" */ "./components/login/Logout.vue")
-    }
+    },
+    {
+      path: "calendarDetail",
+      name: "calendarDetail",
+      component: () =>
+        import(/* webpackChunkName: "calendarDetail" */ "./components/CalendarDetail.vue")
+    },
   ]
 });

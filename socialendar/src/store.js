@@ -22,8 +22,8 @@ export default new Vuex.Store({
     retrieveToken({context,dispatch}, credentials) {
       return new Promise((resolve, reject) => {
         axios
-          //  .post("https://reqres.in/api/login", {
-          .post("http://localhost:3000/users", {
+          .post("https://reqres.in/api/login", {
+          //.post("http://localhost:3000/users", {
             username: credentials.username,
             password: credentials.password
           })
@@ -40,8 +40,8 @@ export default new Vuex.Store({
     register({context,dispatch}, data) {
       return new Promise((resolve, reject) => {
         axios
-          // .post("https://reqres.in/api/register", {
-            .post("http://localhost:3000/users", {
+           .post("https://reqres.in/api/register", {
+            //.post("http://localhost:3000/users", {
             name: data.name,
             email: data.email,
             password: data.password,

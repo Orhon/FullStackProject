@@ -1,8 +1,5 @@
 <template>
   <div class="c-calendar">
-  
-    
-        <calendar-item v-for="ev in this.GetAllEvents" :key="ev.title" :event="ev"/>         
       
   </div>
 </template>
@@ -10,24 +7,21 @@
 <script>
 
 import CalendarItem from '../components/CalendarItem';
-import CalendarDetail from '../components/CalendarDetail';
-
 export default {
+  name: "calendarDetail",
   components:{
-    CalendarItem,
-    CalendarDetail
+    CalendarItem
   },
   computed:{
       GetAllEvents () {
             return this.$store.getters.getsavedEvents
         }
-  },
-  
+  },  
 }
 </script>
 
 
 
 <style lang="scss" scoped>
-@import '../style/components/components.calendar';
+@import '../style/components/components.calendarDetail';
 </style>
