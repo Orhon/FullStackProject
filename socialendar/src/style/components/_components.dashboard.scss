@@ -4,10 +4,11 @@
     background:$dark-grey;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:start;
     align-items:center;
     width:100%;
     height:100vh;
+    //height:100%;
 
 }
 .c-dashboard-navitem__svg{
@@ -27,5 +28,13 @@
     cursor: pointer;
 }
 .c-dasboard button:active{
+    background-color:$primary-color;
+}
+
+.active, .c-dashboard button:hover {
+    background-color:$primary-color;
+}
+a:hover{
+    width:100%;
     background-color:$primary-color;
 }
