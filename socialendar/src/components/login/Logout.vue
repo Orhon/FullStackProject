@@ -8,7 +8,7 @@ export default {
     // this.$store.dispatch('clearTodos')
     this.$store.dispatch('destroyToken')
       .then(response => {
-        this.$router.push({ name: 'home' })
+        this.$router.push({ name: 'login' })
       })
   }
 }

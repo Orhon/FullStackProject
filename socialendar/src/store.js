@@ -12,7 +12,7 @@ export default new Vuex.Store({
   },
   getters: {
     loggedIn(state) {
-      return state.token !== null;g
+      return state.token !== null;
     },
     getToken: state => state.token,
     getsavedEvents : state => state.savedEvents,

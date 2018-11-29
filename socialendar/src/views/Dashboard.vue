@@ -49,7 +49,7 @@ export default {
   },
   data: function(){
     return{
-        currentTab : 'AddEvent',
+        currentTab : 'Calendar',
         TabEvent : 'AddEvent',
         TabHome : 'Calendar'   
     }
