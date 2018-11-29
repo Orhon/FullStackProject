@@ -18,6 +18,10 @@
 .c-nav__logo{
     font-weight:normal;
 }
+.c-nav__logo a{
+    text-decoration: none;
+    color: $white;
+}
 .c-nav__Boldlogo{
     color:#42b983;
 }
@@ -33,6 +37,6 @@
     text-decoration:none;
     color: $white;
 }
-.c-nav .router-link-exact-active{
-    color:#42b983;
+.c-nav__links .router-link-exact-active{
+    color:$primary-color;
 }

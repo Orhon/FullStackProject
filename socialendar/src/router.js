@@ -1,5 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
+import Home from './views/Home.vue';
+import Dashboard from './views/Dashboard.vue';
+import Events from './components/Calendar.vue';
+
 
 Vue.use(Router);
 
@@ -8,10 +12,21 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/home",
+      path: "/",
       name: "home",
-      component: () =>
-        import(/* webpackChunkName: "home" */ "./components/Calendar.vue"),
+      component: Dashboard,
+    },
+    {
+      path:"/Dashboard/:Category",
+      name:"dashboard",
+      component: Dashboard,
+              children: [
+          {
+            // UserProfile will be rendered inside User's <router-view>
+            // when /user/:id/profile is matched
+            path: 'Events',
+            component: Events, Dashboard
+          }]
     },
     {
       path: "/login",

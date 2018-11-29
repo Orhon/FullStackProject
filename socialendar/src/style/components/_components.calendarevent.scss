@@ -1,0 +1,34 @@
+@import '../settings/settings.global';
+
+
+.c-calendar__event{
+    margin:2em;
+    width:20%;
+    background-color: $ultra-white;
+    border-radius:10px;
+}
+
+.c-calendar__event p,h2,h3{
+    text-align:left;
+    padding-left:1em;
+}
+.c-calendar-event__title{
+    color: $primary-color;
+    margin-left:0em;
+    padding-left:.5em;
+    margin:.5em 0 .5em 0;
+}
+.c-calendar-event__description{
+    font-size:0.9em;
+    margin:0 1em 2em 0;
+    padding:.5em 0;
+}
+.c-calendar-event__period{
+    margin:.5em 0;
+    padding:0 1em 0;
+    color:$primary-color;
+    font-weight:700;
+}
+.c-calendar-event__date{
+    font-weight:300;
+}
