@@ -105,13 +105,11 @@ export default {
         description: this.description,
         user: this.user,
         date: this.pickedDate,
-        time: this.pickedTime,
-        color: this.color
+        //time: this.pickedTime,
+        // privateEvent: this.privateEvent
       };
-      console.log("added event: ", eventObj);
+      this.$store.dispatch( 'AddEvent', eventObj)
 
-      localStorage.setItem("event", JSON.stringify(eventObj));
-      
     },
     getCurrentTime: function() {
       this.pickedTime.HH = this.pickedDate.getHours();
