@@ -14,7 +14,7 @@
       </div>
 
       <div>
-        <label for="description">{{$t("time")}}</label>
+        <label for="description">{{$t("description")}}</label>
         <textarea type="text" name="description" id="description" class="description-input" 
         v-model="description" form="formEvent"></textarea>
       </div> 
@@ -39,6 +39,10 @@
         class="noselect"
         ></vue-timepicker>       
       </div>
+      <div class="colorpicker">
+        <h2>{{$t("color")}}</h2>
+        <verte picker="square" v-model="color" model="hex" ></verte> 
+      </div>
       <div>
         <label for="private">{{$t("private_event")}}</label>
         <input type="checkbox" v-model="privateEvent">
@@ -60,12 +64,15 @@ import VueTimepicker from "vue2-timepicker";
 import moment from "moment";
 import { en, nl } from "vuejs-datepicker/dist/locale";
 import { i18n } from "@/plugins/i18n";
+import Verte from 'verte';
+import 'verte/dist/verte.css';
 
 export default {
   name: "addEvent",
   components: {
     Datepicker,
-    VueTimepicker
+    VueTimepicker,
+    Verte
   },
   data() {
     return {
@@ -80,6 +87,7 @@ export default {
       description: "",
       title: "",
       user: null,
+      color: '',
       privateEvent: false,
       lang: en
     };
@@ -103,7 +111,8 @@ export default {
         user: this.user,
         date: this.pickedDate,
         time: this.pickedTime,
-        privateEvent: this.privateEvent
+        privateEvent: this.privateEvent,
+        color: this.color
       };
       console.log("added event: ", eventObj);
       localStorage.setItem("event", eventObj);

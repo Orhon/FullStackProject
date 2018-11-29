@@ -7,5 +7,6 @@
   "location": "Locatie",
   "description": "Omschrijving",
   "date": "Datum",
-  "private_event": "Privé-evenement?"
+  "private_event": "Privé-evenement?",
+  "color": "Kleur"
 }

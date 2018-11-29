@@ -7,5 +7,6 @@
   "location": "Location",
   "description": "Description",
   "date": "Date",
-  "private_event": "Private event?"
+  "private_event": "Private event?",
+  "color": "Color"
 }
