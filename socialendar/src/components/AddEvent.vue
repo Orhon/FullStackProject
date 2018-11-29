@@ -4,17 +4,18 @@
     
     <form class="c-addevent__form" action="#" @submit.prevent="addNewEvent">     
       <div class="c-labels">
-      <div>
+
+      <div class="c-addevent__input c-addevent__title">
         <label for="title">{{$t("event_title")}}</label>
         <input type="text" name="title" id="title" class="title-input" v-model="title">
       </div>
 
-          <div>
+          <div class="c-addevent__input c-addevent__location">
             <label for="location">{{$t("location")}}</label>
             <input type="text" name="location" id="location" class="location-input" v-model="location">
           </div>
 
-      <div>
+      <div class="c-addevent__input c-addevent__description">
         <label for="description">{{$t("description")}}</label>
         <textarea type="text" name="description" id="description" class="description-input" 
         v-model="description" form="formEvent"></textarea>
