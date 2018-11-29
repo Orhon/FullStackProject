@@ -1,0 +1,11 @@
+{
+  "choose_language": "Verander taal",
+  "welcome_message": "Welkom op Socialendar",
+  "time": "Tijd",
+  "add_event": "Event toevoegen",
+  "event_title": "Event titel",
+  "location": "Locatie",
+  "description": "Omschrijving",
+  "date": "Datum",
+  "private_event": "Privé-evenement?"
+}

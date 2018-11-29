@@ -4,9 +4,11 @@ import router from './router'
 import VueRouter from 'vue-router'
 import store from './store'
 import './registerServiceWorker'
+import { i18n } from '@/plugins/i18n'
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
+
 
 router.beforeEach((to,from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
@@ -33,5 +35,6 @@ router.beforeEach((to,from, next) => {
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

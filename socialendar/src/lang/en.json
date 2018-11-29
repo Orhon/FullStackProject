@@ -1,0 +1,11 @@
+{
+  "choose_language": "Change Language",
+  "welcome_message": "Welcome to Socialendar",
+  "time": "Time",
+  "add_event": "Add event",
+  "event_title": "Event Title",
+  "location": "Location",
+  "description": "Description",
+  "date": "Date",
+  "private_event": "Private event?"
+}
