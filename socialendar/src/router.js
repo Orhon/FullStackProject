@@ -25,8 +25,13 @@ export default new Router({
             // UserProfile will be rendered inside User's <router-view>
             // when /user/:id/profile is matched
             path: 'Events',
-            component: Events, Dashboard
-          }]
+            component: Events, Dashboard,
+            
+            
+          }],
+          meta: {
+            requiresAuth: true
+          }
     },
     {
       path: "/login",
