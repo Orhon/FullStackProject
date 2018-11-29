@@ -1,8 +1,9 @@
 <template>
-  <div>
-    <h1>{{$t("add_event")}}</h1>
-    <form id="formEvent" action="#" @submit.prevent="addNewEvent">     
-      
+  <div class="c-wrapper">
+    <div class="c-headerTitle"><h1>{{$t("add_event")}}</h1></div>
+    
+    <form class="c-addevent__form" action="#" @submit.prevent="addNewEvent">     
+      <div class="c-labels">
       <div>
         <label for="title">{{$t("event_title")}}</label>
         <input type="text" name="title" id="title" class="title-input" v-model="title">
@@ -18,7 +19,8 @@
         <textarea type="text" name="description" id="description" class="description-input" 
         v-model="description" form="formEvent"></textarea>
       </div> 
-
+      </div>
+      <h2>{{$t("date")}}: {{customFormatterDate(pickedDate)}}</h2>
       <div class="pickDate">
         <datepicker placeholder="select date" 
         :inline="true" v-model="pickedDate" 
@@ -27,7 +29,7 @@
         :language="getLanguage()"  
         >
         </datepicker>
-        <h2>{{$t("date")}}: {{customFormatterDate(pickedDate)}}</h2>
+        
       </div>
 
       <div class="pickTime">
@@ -39,12 +41,12 @@
         class="noselect"
         ></vue-timepicker>       
       </div>
-      <div class="colorpicker">
+      <div class="c-colorpicker">
         <h2>{{$t("color")}}</h2>
-        <verte picker="square" v-model="color" model="hex" ></verte> 
+        <verte id="colorpicker" picker="square" v-model="color" model="hex" ></verte> 
       </div>
       <div>
-        <button type="submit" class="btn-submit">{{$t("add_event")}}</button>
+        <button type="submit" class="c-btn-submit">{{$t("add_event")}}</button>
       </div>   
         
     </form>
