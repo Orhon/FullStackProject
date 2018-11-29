@@ -32,3 +32,36 @@
 .c-calendar-event__date{
     font-weight:300;
 }
+@media only screen and (max-width: 1200px ) {
+    .c-calendar__event{
+        width:25%;
+    }
+
+}
+@media only screen and (max-width: 980px ) {
+    .c-calendar__event{
+        width:30%;
+    }
+
+}
+@media only screen and (max-width: 760px ) {
+    .c-calendar__event{
+        width:45%;
+        justify-content:center;
+    }
+
+}
+@media only screen and (max-width: 520px ) {
+    .c-calendar__event{
+        width:80%;
+        justify-content:center;
+    }
+
+}
+@media only screen and (max-width: 480px ) {
+    .c-calendar__event{
+        width:85%;
+        justify-content:center;
+    }
+
+}

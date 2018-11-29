@@ -77,3 +77,47 @@
     border: $primary-color 2px solid;
     box-shadow: 2px 2px 15px -2px rgba(0,0,0,0.75);
 }
+
+@media only screen and (max-width: 1140px ) {
+    .c-register__form{
+        width: 45%;
+        height:53vh;
+    }
+
+}
+
+@media only screen and (max-width: 980px ) {
+    .c-register__form{
+        width: 55%;
+        height:60vh;
+    }
+
+}
+@media only screen and (max-width: 560px ) {
+    .c-register__form{
+        width: 70%;
+        height:55vh;
+    }
+
+}
+@media only screen and (max-width: 480px ) {
+    .c-register__form{
+        width: 80%;
+    }
+    .c-register-form__buttons{
+        flex-direction:column;
+        align-items:center;
+        justify-content:start;
+        width:100%;
+    }
+    .c-register-form__register{
+        height:50px;
+        width:70%;
+    }
+}
+@media only screen and (max-width: 320px ) {
+    .c-register__form{
+        width: 90%;
+    }
+
+}

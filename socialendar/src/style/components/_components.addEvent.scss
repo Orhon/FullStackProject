@@ -9,3 +9,21 @@
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
   }
+
+.c-block{
+  background-color:$white;
+  width:80%;
+  margin:0 auto;
+  height:100vh;
+
+}
+.c-AddEvent{
+  width:100%;
+  display:flex;
+}
+.c-addevent__left{
+  width:40%;
+}
+.c-addevent__right{
+  width:40%;
+}

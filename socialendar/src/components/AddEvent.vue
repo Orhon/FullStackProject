@@ -1,56 +1,56 @@
 <template>
-  <div>
-    <h1>{{$t("add_event")}}</h1>
-    <form id="formEvent" action="#" @submit.prevent="addNewEvent">     
-      
-      <div>
-        <label for="title">{{$t("event_title")}}</label>
-        <input type="text" name="title" id="title" class="title-input" v-model="title">
-      </div>
+  <div class="c-block">
+      <h1>{{$t("add_event")}}</h1>
+      <form id="formEvent" action="#" @submit.prevent="addNewEvent" class="c-AddEvent">  
+        <div class="c-addevent__left">
+  
+          <div>
+            <label for="title">{{$t("event_title")}}</label>
+            <input type="text" name="title" id="title" class="title-input" v-model="title">
+          </div>
 
-      <div>
-        <label for="location">{{$t("location")}}</label>
-        <input type="text" name="location" id="location" class="location-input" v-model="location">
-      </div>
+          <div>
+            <label for="location">{{$t("location")}}</label>
+            <input type="text" name="location" id="location" class="location-input" v-model="location">
+          </div>
 
-      <div>
-        <label for="description">{{$t("description")}}</label>
-        <textarea type="text" name="description" id="description" class="description-input" 
-        v-model="description" form="formEvent"></textarea>
-      </div> 
-
-      <div class="pickDate">
-        <datepicker placeholder="select date" 
-        :inline="true" v-model="pickedDate" 
-        :maximumView="'month'"
-        :format="customFormatterDate"  
-        :language="getLanguage()"  
-        >
-        </datepicker>
-        <h2>{{$t("date")}}: {{customFormatterDate(pickedDate)}}</h2>
-      </div>
-
-      <div class="pickTime">
-        <h2>{{$t("time")}}: {{customFormatterTime(pickedTime)}}</h2>
-        <vue-timepicker v-model="pickedTime" 
-        format="HH:mm"
-        :minute-interval="5"
-        hide-clear-button
-        class="noselect"
-        ></vue-timepicker>       
-      </div>
-      <div class="colorpicker">
-        <h2>{{$t("color")}}</h2>
-        <verte picker="square" v-model="color" model="hex" ></verte> 
-      </div>
-      <div>
-        <button type="submit" class="btn-submit">{{$t("add_event")}}</button>
-      </div>   
+          <div>
+            <label for="description">{{$t("description")}}</label>
+            <textarea type="text" name="description" id="description" class="description-input" 
+            v-model="description" form="formEvent"></textarea>
+          </div> 
         
-    </form>
-
-     
-  </div>
+          <div class="pickTime">
+            <h2>{{$t("time")}}: {{customFormatterTime(pickedTime)}}</h2>
+            <vue-timepicker v-model="pickedTime" 
+            format="HH:mm"
+            :minute-interval="5"
+            hide-clear-button
+            class="noselect"
+            ></vue-timepicker>       
+          </div>
+          <div class="colorpicker">
+            <h2>{{$t("color")}}</h2>
+            <verte picker="square" v-model="color" model="hex" ></verte> 
+          </div>
+          </div>
+          <div class="c-addevent__right">
+            <div class="pickDate">
+              <datepicker placeholder="select date" 
+              :inline="true" v-model="pickedDate" 
+              :maximumView="'month'"
+              :format="customFormatterDate"  
+              :language="getLanguage()"  
+              >
+              </datepicker>
+              <h2>{{$t("date")}}: {{customFormatterDate(pickedDate)}}</h2>
+            </div>
+          </div>
+          <div>
+            <button type="submit" class="btn-submit">{{$t("add_event")}}</button>
+          </div>   
+        </form>
+    </div>
 </template>
 
 
@@ -128,5 +128,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./src/style/components/components.addEvent";
+@import "./src/style/components/components.addevent";
 </style>
