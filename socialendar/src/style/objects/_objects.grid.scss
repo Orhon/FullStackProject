@@ -1,4 +1,40 @@
+@import '../settings/settings.global';
+
+
 .o-grid{
     display: grid;
     grid-template-columns: 4% 96%;
+    height:100vh;
+}
+
+
+@media only screen and (max-width: 1200px ) {
+    .o-grid{
+        grid-template-columns:6% 94%;
+    }
+
+}
+
+@media only screen and (max-width: 1140px ) {
+    .o-grid{
+        grid-template-columns:8% 92%;
+    }
+
+}
+@media only screen and (max-width: 980px ) {
+    .o-grid{
+        grid-template-columns:8% 92%;
+    }
+
+}
+@media only screen and (max-width: 760px ) {
+    .o-grid{
+        grid-template-columns:11% 89%;
+    }
+
+}
+@media only screen and (max-width: 480px ) {
+    .o-grid{
+        display: block;
+    }
 }

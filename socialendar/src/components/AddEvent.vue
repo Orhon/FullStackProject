@@ -9,10 +9,10 @@
         <input type="text" name="title" id="title" class="title-input" v-model="title">
       </div>
 
-      <div>
-        <label for="location">{{$t("location")}}</label>
-        <input type="text" name="location" id="location" class="location-input" v-model="location">
-      </div>
+          <div>
+            <label for="location">{{$t("location")}}</label>
+            <input type="text" name="location" id="location" class="location-input" v-model="location">
+          </div>
 
       <div>
         <label for="description">{{$t("description")}}</label>
@@ -48,10 +48,7 @@
       <div>
         <button type="submit" class="c-btn-submit">{{$t("add_event")}}</button>
       </div>   
-        
     </form>
-
-     
   </div>
 </template>
 
@@ -130,5 +127,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "./src/style/components/components.addEvent";
+@import "./src/style/components/components.addevent";
 </style>
