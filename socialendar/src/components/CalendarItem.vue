@@ -1,5 +1,6 @@
 <template>
-  <div class="c-calendar__event">
+  <div class="c-calendar__event" id="card">
+<!-- v-bind:style="styleObject" -->
    <h2 class="c-calendar-event__title">{{event.title}}</h2>
     <p class="c-calendar-event__description">{{event.description}}</p>
     <h3 class="c-calendar-event__period">{{$t("location")}}</h3>
@@ -24,11 +25,25 @@ export default {
                 title: String,
                 time: Object,
                 date: String,
+                color: String,
             }
     },
+    // data:{
+    //     styleObject:{ 
+    //         border: 1px solid event.color       
+    //     }
+    // },
     created(){
         console.log("received event: ",this.event)
-    }
+        //SetBorder();
+    },
+    // methods:{
+    //     SetBorder : function(){
+    //         card = document.getElementById("card");
+    //         card.style.border = '1px solid {{event.color}}'
+
+    //     }
+    // }
 
 
 }

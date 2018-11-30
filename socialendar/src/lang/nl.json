@@ -8,5 +8,7 @@
   "description": "Omschrijving",
   "date": "Datum",
   "private_event": "Privé-evenement?",
-  "color": "Kleur"
+  "color": "Kleur",
+  "settings_title":"Instellingen",
+  "langpref":"Taalkeuze"
 }

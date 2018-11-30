@@ -1,0 +1,53 @@
+@import '../settings/settings.global';
+
+.c-settings{
+    height:100vh;
+    background-color:$primary-color;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.c-setting__container{
+    width:30%;
+    background-color:$white;
+    height:50vh;
+}
+.c-setting__container h2{
+    color:$primary-color;
+}
+.c-setting__container h3{
+    text-align:left;
+    margin: 3em 0 0 2em;
+}
+.c-langSwitcher select{
+    width:50%;
+    margin:2em 0 0 0;
+
+}
+@media only screen and (max-width: 1140px ) {
+    .c-setting__container{
+        width:40%;
+    }
+}
+
+@media only screen and (max-width: 960px ) {
+    .c-setting__container{
+        width:50%;
+    }
+}
+@media only screen and (max-width: 760px ) {
+    .c-setting__container{
+        width:60%;
+    }
+}
+@media only screen and (max-width: 530px ) {
+    .c-setting__container{
+        width:75%;
+    }
+}
+@media only screen and (max-width: 480px ) {
+    .c-setting__container{
+        width:90%;
+    }
+}

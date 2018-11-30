@@ -116,6 +116,9 @@ export default {
         // privateEvent: this.privateEvent
       };
       this.$store.dispatch( 'AddEvent', eventObj)
+      currentTab : 'Calendar';
+      return this.currentTab
+      
 
     },
     getCurrentTime: function() {

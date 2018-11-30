@@ -8,5 +8,7 @@
   "description": "Description",
   "date": "Date",
   "private_event": "Private event?",
-  "color": "Color"
+  "color": "Color",
+  "settings_title":"Settings",
+  "langpref":"Language preference"
 }
