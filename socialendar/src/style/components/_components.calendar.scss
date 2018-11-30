@@ -50,3 +50,21 @@ h2,h3{
   .close:after {
     transform: rotate(-45deg);
   }
+
+  @media only screen and (max-width: 480px ) {
+    .c-detail{
+      width:40%;
+    }
+    @media only screen and (max-width: 960px ) {
+      .c-detail{
+        width:50%;
+      }
+    }
+    @media only screen and (max-width: 760px ) {
+      .c-detail{
+        width:65%;
+        align-items: center;
+      }
+    }
+
+}
