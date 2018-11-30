@@ -53,7 +53,7 @@ import LangSwitch from '../components/LanguageSwitcher';
 
 
 export default {
-  name:"Dashboard",
+  name:"dashboard",
   components:{
     Calendar,
     AddEvent,

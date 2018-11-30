@@ -1,21 +1,24 @@
 <template>
   <div class="c-calendar">
-      
+    {{this.event}}
   </div>
 </template>
 
 <script>
 
-import CalendarItem from '../components/CalendarItem';
+import Dashboard from '../views/Dashboard.vue';
 export default {
   name: "calendarDetail",
   components:{
-    CalendarItem
+      Dashboard
+  },
+  data(){
+    return{
+      event:this.$router.params.event
+    }
   },
   computed:{
-      GetAllEvents () {
-            return this.$store.getters.getsavedEvents
-        }
+      
   },  
 }
 </script>

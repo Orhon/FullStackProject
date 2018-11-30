@@ -104,7 +104,8 @@ export default {
         description: this.description,
         user: this.user,
         date: this.pickedDate,
-        //time: this.pickedTime,
+        time: this.customFormatterTime(this.pickedTime),
+        color: this.color
         // privateEvent: this.privateEvent
       };
       this.$store.dispatch( 'AddEvent', eventObj)

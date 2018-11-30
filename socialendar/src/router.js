@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from './views/Home.vue';
 import Dashboard from './views/Dashboard.vue';
 import Events from './components/Calendar.vue';
 import CalendarDetail from './components/CalendarDetail.vue';
@@ -18,7 +17,7 @@ export default new Router({
       component: Dashboard,
     },
     {
-      path:"/Dashboard/:Category",
+      path:"/dashboard/:Category",
       name:"dashboard",
       component: Dashboard,
               children: [
@@ -59,10 +58,9 @@ export default new Router({
         import(/* webpackChunkName: "logout" */ "./components/login/Logout.vue")
     },
     {
-      path: "calendarDetail",
+      path: "/calendarDetail",
       name: "calendarDetail",
-      component: () =>
-        import(/* webpackChunkName: "calendarDetail" */ "./components/CalendarDetail.vue")
+      component: CalendarDetail
     },
   ]
 });
