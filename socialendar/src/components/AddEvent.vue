@@ -6,23 +6,36 @@
       <div class="c-labels">
 
       <div class="c-addevent__input c-addevent__title">
-        <label for="title">{{$t("event_title")}}</label>
-        <input type="text" name="title" id="title" class="title-input" v-model="title">
+        <label for="title">{{$t("event_title")}}:</label>
+        <input type="text" name="title" id="title" placeholder="Title for your event" class="title-input" v-model="title">
       </div>
 
           <div class="c-addevent__input c-addevent__location">
-            <label for="location">{{$t("location")}}</label>
-            <input type="text" name="location" id="location" class="location-input" v-model="location">
+            <label for="location">{{$t("location")}}:</label>
+            <input placeholder="Location for your event" type="text" name="location" id="location" class="location-input" v-model="location">
           </div>
 
       <div class="c-addevent__input c-addevent__description">
-        <label for="description">{{$t("description")}}</label>
-        <textarea type="text" name="description" id="description" class="description-input" 
+        <label for="description">{{$t("description")}}:</label>
+        <textarea placeholder="Short description of your event" type="text" name="description" id="description" class="description-input" 
         v-model="description" form="formEvent"></textarea>
       </div> 
       </div>
-      <h2>{{$t("date")}}: {{customFormatterDate(pickedDate)}}</h2>
-      <div class="pickDate">
+      <div class="pickTime c-addevent__timepicker">
+        <h3>{{$t("time")}}: {{customFormatterTime(pickedTime)}}</h3>
+        <vue-timepicker v-model="pickedTime" 
+        format="HH:mm"
+        :minute-interval="5"
+        hide-clear-button
+        class="noselect"
+        ></vue-timepicker>       
+      </div>
+
+
+
+      <h3>{{$t("date")}}: {{customFormatterDate(pickedDate)}}</h3>
+      <div class="pickDate c-addevent__datepicker">
+        
         <datepicker placeholder="select date" 
         :inline="true" v-model="pickedDate" 
         :maximumView="'month'"
@@ -32,20 +45,13 @@
         </datepicker>
         
       </div>
-
-      <div class="pickTime">
-        <h2>{{$t("time")}}: {{customFormatterTime(pickedTime)}}</h2>
-        <vue-timepicker v-model="pickedTime" 
-        format="HH:mm"
-        :minute-interval="5"
-        hide-clear-button
-        class="noselect"
-        ></vue-timepicker>       
-      </div>
-      <div class="c-colorpicker">
-        <h2>{{$t("color")}}</h2>
+            <div class="c-colorpicker">
+        <h3>{{$t("color")}}</h3>
         <verte id="colorpicker" picker="square" v-model="color" model="hex" ></verte> 
       </div>
+      
+
+
       <div>
         <button type="submit" class="c-btn-submit">{{$t("add_event")}}</button>
       </div>   

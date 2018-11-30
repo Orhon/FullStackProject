@@ -15,12 +15,12 @@
   background-color:$primary-color;
   display:flex;
   justify-content: center;
-  width: 100vw;
+  width: auto;
 }
 
 .c-headerTitle{
   position: absolute;
-  top:10px;
+  top:1em;
 }
 
 .c-pickDate{
@@ -39,21 +39,24 @@
 }
 
 .c-addevent__form input,textarea {
-  display: block;
   border-width: 1px;
   border-style: solid;
-  border-color: black;
-  margin-left: 0.5em;
-  margin-top: 0.3em;
+  border-color: $light-grey;
+  width:50%;
   
+}
+.c-addevent__form input,textarea{
+  font-size:0.9em;
+}
+.c-addevent__form input:focus,textarea:focus{
+  border:1.5px solid $primary-color;
+  outline:none;
 }
 
 .c-labels{
-  margin-top:2em;
-  text-align: left;
+  margin:5em 0 3em 0;
+
 }
-
-
 .c-btn-submit{
   background-color:$primary-color;
   width:40%;
@@ -66,12 +69,69 @@
   font-weight:600;
   cursor: pointer;
 }
-
+.c-btn-submit:hover{
+  color:$primary-color;
+  background-color:$white;
+  border-color:$primary-color;
+  border:1.5px solid;
+}
 .c-addevent__input{
   width:80%;
   display:flex;
   justify-content:space-between;
-  margin:0 auto;
+  margin:1em auto;
   align-content:center;
   align-items:center;
+
+}
+.c-addevent__input .c-addevent__title{
+  margin-top:3em;
+}
+.c-addevent__datepicker{
+  display:flex;
+  justify-content: center;
+  margin:2em auto;
+  width:80%;
+  position:static;
+}
+vue-timepicker{
+  position:static;
+}
+.c-addevent__timepicker{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width:80%;
+  align-items: center;
+  margin:2em auto 3em auto;
+}
+.c-colorpicker{
+  margin:2em 0;
+}
+.c-addevent__form button{
+  margin-bottom:2em;
+}
+
+@media only screen and (max-width: 1140px ) {
+  .c-addevent__form{
+    width:40%;
+  }
+}
+@media only screen and (max-width: 960px ) {
+  .c-addevent__form{
+    width:50%;
+  }
+}
+@media only screen and (max-width: 760px ) {
+  .c-addevent__form{
+    width:65%;
+  }
+}
+@media only screen and (max-width: 480px ) {
+  .c-addevent__form{
+    width:100%;
+  }
+  .c-addevent__form button{
+    margin-bottom:30%;
+  }
 }
