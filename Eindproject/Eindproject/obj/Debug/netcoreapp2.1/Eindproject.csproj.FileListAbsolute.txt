@@ -1,0 +1,7 @@
+E:\Howest\Jaar 3\Smart App II\ProjectFullStack\Eindproject\Eindproject\obj\Debug\netcoreapp2.1\Eindproject.csprojAssemblyReference.cache
+E:\Howest\Jaar 3\Smart App II\ProjectFullStack\Eindproject\Eindproject\obj\Debug\netcoreapp2.1\Eindproject.csproj.CoreCompileInputs.cache
+E:\Howest\Jaar 3\Smart App II\ProjectFullStack\Eindproject\Eindproject\obj\Debug\netcoreapp2.1\Eindproject.RazorAssemblyInfo.cache
+E:\Howest\Jaar 3\Smart App II\ProjectFullStack\Eindproject\Eindproject\obj\Debug\netcoreapp2.1\Eindproject.RazorAssemblyInfo.cs
+E:\Howest\Jaar 3\Smart App II\ProjectFullStack\Eindproject\Eindproject\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
+E:\Howest\Jaar 3\Smart App II\ProjectFullStack\Eindproject\Eindproject\obj\Debug\netcoreapp2.1\Eindproject.AssemblyInfoInputs.cache
+E:\Howest\Jaar 3\Smart App II\ProjectFullStack\Eindproject\Eindproject\obj\Debug\netcoreapp2.1\Eindproject.AssemblyInfo.cs
