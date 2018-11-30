@@ -1,5 +1,5 @@
 <template>
-  <div class="c-calendar__event">
+  <div class="c-calendar__event"  v-bind:style="{'border-color': event.color}">
    <h2 class="c-calendar-event__title">{{event.title}}</h2>
     <p class="c-calendar-event__description">{{event.description}}</p>
     <h3 class="c-calendar-event__period">{{$t("location")}}</h3>
