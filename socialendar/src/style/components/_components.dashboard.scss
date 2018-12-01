@@ -31,14 +31,20 @@
 }
 .c-dasboard button:active{
     background-color:$primary-color;
+    outline:none;
 }
 
 .active, .c-dashboard button:hover {
     background-color:$primary-color;
+    outline:none;
 }
 a:hover{
     width:100%;
     background-color:$primary-color;
+    outline:none;
+}
+a{
+    outline:none;
 }
 
 @media only screen and (max-width: 480px ) {

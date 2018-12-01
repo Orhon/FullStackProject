@@ -1,10 +1,5 @@
 <template>
-<<<<<<< HEAD
-  <div class="c-calendar__event" id="card">
-<!-- v-bind:style="styleObject" -->
-=======
-  <div class="c-calendar__event"  v-bind:style="{'border-color': event.color}">
->>>>>>> cda099115b81103454e1bb7611b181738fdcf1e7
+  <div class="c-calendar__event" v-bind:style="{'border-color': event.color}">
    <h2 class="c-calendar-event__title">{{event.title}}</h2>
     <p class="c-calendar-event__description">{{event.description}}</p>
     <h3 class="c-calendar-event__period">{{$t("location")}}</h3>
@@ -48,7 +43,6 @@ export default {
 
     //     }
     // }
-
 
 }
 </script>
